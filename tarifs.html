@@ -1,1 +1,302 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs & Services - DEBUG LOCAL Fréjus</title>
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --card-bg: #131b2e;
+            --primary: #00d2ff;
+            --accent: #3a7bd5;
+            --text-main: #f0f4f8;
+            --text-muted: #94a3b8;
+            --border: rgba(0, 210, 255, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(19, 27, 46, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--text-main);
+        }
+
+        .logo-title span {
+            color: var(--primary);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .page-title h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: border-color 0.3s, transform 0.2s;
+        }
+
+        .price-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.15);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary);
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .card-header h3 {
+            font-size: 1.3rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-tag {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .price-tag span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .services-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .services-list li {
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .services-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .guarantee-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav a {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-title">DEBUG <span>LOCAL</span></div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="tarifs.html" class="active">Tarifs</a>
+            <a href="avis.html">Avis</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-title">
+            <h1>Tarifs & Grille de Prestations</h1>
+            <p>Forfaits transparents et sans mauvaises surprises pour vos dépannages à domicile.</p>
+        </div>
+
+        <div class="pricing-grid">
+            
+            <!-- Carte 1 : Mobile & Tablette -->
+            <div class="price-card">
+                <div>
+                    <div class="card-header">
+                        <h3>📱 Mobile & Tablette</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Assistance & Nettoyage</p>
+                    </div>
+                    <div class="price-tag">29 € <span>/ forfait</span></div>
+                    <ul class="services-list">
+                        <li>Nettoyage de mémoire & stockage</li>
+                        <li>Suppression d'applications parasites</li>
+                        <li>Transfert de photos & données</li>
+                        <li>Configuration de comptes (Mail, iCloud)</li>
+                    </ul>
+                </div>
+                <a href="tel:0650021565" class="btn">Réserver une intervention</a>
+            </div>
+
+            <!-- Carte 2 : Imprimante -->
+            <div class="price-card">
+                <div>
+                    <div class="card-header">
+                        <h3>🖨️ Pack Imprimante</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Installation & Connexion</p>
+                    </div>
+                    <div class="price-tag">39 € <span>/ forfait</span></div>
+                    <ul class="services-list">
+                        <li>Installation complète Wi-Fi / Réseau</li>
+                        <li>Connexion PC, Smartphones & Tablettes</li>
+                        <li>Configuration du scanner vers email/PC</li>
+                        <li>Résolution des bugs "imprimante hors-ligne"</li>
+                    </ul>
+                </div>
+                <a href="tel:0650021565" class="btn">Réserver une intervention</a>
+            </div>
+
+            <!-- Carte 3 : Dépannage PC -->
+            <div class="price-card featured">
+                <div class="featured-badge">Plus Demandé</div>
+                <div>
+                    <div class="card-header">
+                        <h3>💻 Dépannage PC / Mac</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Nettoyage & Rénovation Système</p>
+                    </div>
+                    <div class="price-tag">59 € <span>/ forfait</span></div>
+                    <ul class="services-list">
+                        <li>Nettoyage complet anti-virus & malwares</li>
+                        <li>Résolution des lenteurs et blocages</li>
+                        <li>Mises à jour système & sécurité</li>
+                        <li>Réinstallation propre si nécessaire</li>
+                    </ul>
+                </div>
+                <a href="tel:0650021565" class="btn">Réserver une intervention</a>
+            </div>
+
+        </div>
+
+        <div class="guarantee-box">
+            <h3 style="color: var(--primary); margin-bottom: 0.5rem;">🚗 Intervention Rapide sur Fréjus & Environs</h3>
+            <p style="color: var(--text-muted);">Tous les déplacements à domicile sont organisés sur rendez-vous du lundi au samedi de 08h00 à 19h00.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>DEBUG LOCAL - Dépannage informatique à domicile à Fréjus & environs.</p>
+        <p>Email : <a href="mailto:raphaelmaury83600@gmail.com" style="color: var(--primary);">raphaelmaury83600@gmail.com</a> | Tél : 06 50 02 15 65</p>
+    </footer>
+
+</body>
+</html>
