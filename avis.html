@@ -3,176 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avis Clients - DEBUG LOCAL Fréjus</title>
-    <style>
-        :root {
-            --bg-dark: #0a0e17;
-            --card-bg: #131b2e;
-            --primary: #00d2ff;
-            --accent: #3a7bd5;
-            --text-main: #f0f4f8;
-            --text-muted: #94a3b8;
-            --border: rgba(0, 210, 255, 0.2);
-            --star: #ffc107;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        header {
-            background: rgba(19, 27, 46, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-title {
-            font-size: 1.4rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: var(--text-main);
-        }
-
-        .logo-title span {
-            color: var(--primary);
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--primary);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 1rem;
-        }
-
-        .page-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .page-title h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .page-title p {
-            color: var(--text-muted);
-        }
-
-        .callout-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 20px rgba(0, 210, 255, 0.1);
-        }
-
-        .stars {
-            color: var(--star);
-            font-size: 1.5rem;
-            margin: 0.5rem 0;
-        }
-
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-top: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
-            transition: transform 0.2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .review-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-        }
-
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .author {
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        .date {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .review-text {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-style: italic;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            margin-top: 3rem;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            nav a {
-                margin: 0 0.5rem;
-            }
-        }
-    </style>
+    <title>Avis Clients - DEBUG LOCAL</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -188,49 +20,32 @@
 
     <div class="container">
         <div class="page-title">
-            <h1>Avis Clients & Témoignages</h1>
-            <p>Découvrez les retours de nos clients à Fréjus et ses alentours.</p>
+            <h1>Avis Clients Google</h1>
+            <p>Consultez les retours d'expérience ou laissez votre avis sur DEBUG LOCAL.</p>
         </div>
 
         <div class="callout-box">
-            <h2>Vous avez fait appel à DEBUG LOCAL ?</h2>
+            <h2 style="color: #fff; margin-bottom: 10px;">⭐ Vos avis 5 Étoiles sur Google</h2>
             <div class="stars">★★★★★</div>
-            <p>Votre avis compte énormément ! Merci d'accorder 1 minute pour laisser votre retour sur Google.</p>
-            <a href="https://g.page/r/CWBxF0EmA5yxEBM/review" target="_blank" class="btn">⭐ Déposer un avis Google</a>
+            <p style="color: var(--text-muted); margin: 15px 0;">
+                Vous avez fait appel à mes services de dépannage informatique à Fréjus ?<br>
+                Soutenez <strong>DEBUG LOCAL</strong> en laissant un avis en moins de 30 secondes.
+            </p>
+            <a href="https://g.page/r/CWBxF0EmA5yxEBM/review" target="_blank" class="btn">
+                ✍️ Laisser un avis sur Google Maps
+            </a>
         </div>
 
-        <h2 style="margin-bottom: 1.5rem;">Derniers avis reçus</h2>
-
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="author">Client Vérifié</span>
-                    <span class="stars">★★★★★</span>
-                </div>
-                <p class="review-text">« Super service ! Mon ordinateur ramait complètement. DEBUG LOCAL est intervenu rapidement à la maison. Ce jeune homme a fait un nettoyage complet et a réglé tous mes problèmes. Je recommande ! »</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="author">Client Vérifié</span>
-                    <span class="stars">★★★★★</span>
-                </div>
-                <p class="review-text">« J'étais bloqué avec mon imprimante qui ne voulait plus se connecter en Wi-Fi. Intervention rapide, efficace et très pro. Ce jeune est très sérieux et compétent ! »</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="author">Client Vérifié</span>
-                    <span class="stars">★★★★★</span>
-                </div>
-                <p class="review-text">« Très professionnel et à l'écoute. Il m'a aidé à nettoyer le stockage de ma tablette et à régler mes soucis de configuration. Service impeccable et rapide. »</p>
-            </div>
+        <div class="hours-box">
+            <h3 style="color: var(--primary);">📍 DEBUG LOCAL - Fréjus & Environs</h3>
+            <p style="color: var(--text-muted); margin-top: 5px;">Jeune Technicien Informatique à Domicile</p>
+            <p style="margin-top: 10px;">📞 <strong>06 50 02 15 65</strong></p>
+            <p>✉️ <strong>raphaelmaury83600@gmail.com</strong></p>
         </div>
     </div>
 
     <footer>
-        <p>DEBUG LOCAL - Dépannage informatique à domicile à Fréjus & environs.</p>
-        <p>Email : <a href="mailto:raphaelmaury83600@gmail.com" style="color: var(--primary);">raphaelmaury83600@gmail.com</a> | Tél : 06 50 02 15 65</p>
+        <p>DEBUG LOCAL - Service d'assistance informatique à domicile.</p>
     </footer>
 
 </body>
