@@ -248,4 +248,34 @@
 
                     <div class="form-group">
                         <label for="tel">Numéro de téléphone</label>
-                        <input type="tel" id="tel" name="Téléphone" placeholder="06 00 00 0
+                        <input type="tel" id="tel" name="Téléphone" placeholder="06 00 00 00 00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service concerné</label>
+                        <select id="service" name="Service">
+                            <option value="PC">Dépannage & Nettoyage PC (59 €)</option>
+                            <option value="Imprimante">Configuration Imprimante (39 €)</option>
+                            <option value="Mobile">Assistance Smartphone / Tablette (29 €)</option>
+                            <option value="Autre">Autre demande / Conseil</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Votre message / Description du problème</label>
+                        <textarea id="message" name="Message" rows="4" placeholder="Ex: Mon ordinateur plante au démarrage..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>DEBUG LOCAL - Dépannage informatique à domicile à Fréjus & environs.</p>
+        <p>Email : <a href="mailto:raphaelmaury83600@gmail.com" style="color: var(--primary);">raphaelmaury83600@gmail.com</a> | Tél : 06 50 02 15 65</p>
+    </footer>
+
+</body>
+</html>
